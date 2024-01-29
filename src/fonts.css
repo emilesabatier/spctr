@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "Lekton";
+  src: local("Lekton"), url("./assets/fonts/lekton.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
