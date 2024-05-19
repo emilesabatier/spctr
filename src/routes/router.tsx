@@ -4,6 +4,7 @@ import { donationsRoute } from "./donations/donations.route"
 import { eventsRoute } from "./events/events.route"
 import { galleryRoute } from "./gallery/gallery.route"
 import { homeRoute } from "./home/home.route"
+import { inscriptionRoute } from "./inscription/inscription.route"
 import { manifestRoute } from "./manifest/manifest.route"
 import { navigationLayoutRoute } from "./navigation.layout"
 import { rootLayoutRoute } from "./root.route"
@@ -18,7 +19,8 @@ const routeTree = rootLayoutRoute.addChildren([
         teamRoute,
         manifestRoute,
         contactRoute,
-        donationsRoute
+        donationsRoute,
+        inscriptionRoute
     ])
 ])
 

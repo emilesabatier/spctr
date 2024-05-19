@@ -20,7 +20,8 @@ export default {
                 neutral: "#1F292E",
                 neon: "#f7e13b",
                 background: "#030711",
-                foreground: "#EEEEEE"
+                foreground: "#EEEEEE",
+                red: "#FF0000"
             },
             keyframes: {
                 "accordion-down": {
@@ -163,9 +164,9 @@ export default {
             dropShadow: {
                 "neon": [
                     "0 0 2px",
-                    "0 0 1em #EBD31455",
-                    "0 0 0.5em #EBD31455",
-                    "0 0 0.1em #EBD31455",
+                    "0 0 1em #FF000055",
+                    "0 0 0.5em #FF000055",
+                    "0 0 0.1em #FF000055",
                     "0 10px 3px #000"
                 ]
             },

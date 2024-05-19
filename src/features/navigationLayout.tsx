@@ -1,5 +1,5 @@
 import { IconMenu } from "@tabler/icons-react"
-import { Link, Outlet, useRouterState } from "@tanstack/react-router"
+import { Link, Outlet } from "@tanstack/react-router"
 import { SpectreCourt } from "../assets/SpectreCourt"
 import { Glitch } from "../assets/glitch"
 import { Button } from "../components/button"
@@ -10,7 +10,7 @@ import { useMobileDevice } from "../services/useMobileDevice.service"
 
 
 export function NavigationLayout() {
-    const { location } = useRouterState()
+    // const { location } = useRouterState()
     const { isMobile } = useMobileDevice()
 
     return (
@@ -43,7 +43,7 @@ export function NavigationLayout() {
                         :
                         <div className={cn(
                             "w-full p-4 md:p-8 flex flex-col justify-between items-end gap-4 md:gap-8",
-                            location.href !== "/" ? "border-l border-white/10" : ""
+                            // location.href !== "/" ? "border-l border-white/10" : ""
                         )}>
                             <Navigation />
                             {

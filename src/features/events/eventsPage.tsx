@@ -517,7 +517,13 @@ const pastEvents: Event[] = [
     }
 ]
 
-const nextEvent: Event | undefined = undefined
+const nextEvent: Event | undefined = {
+    id: "back_to_betise_08062024",
+    date: "08 06 2024",
+    name: "Back to bêtises",
+    banner: banner_09092023,
+    lineUp: []
+}
 
 export default function EventsPage() {
     return (
@@ -545,35 +551,44 @@ export default function EventsPage() {
                                         <div className="flex flex-col justify-between items-end gap-8">
                                             <ol className="flex flex-col justify-start items-stretch gap-2">
                                                 {
-                                                    nextEvent.lineUp.map(time => (
-                                                        <li key={time.timeStartHour} className="flex flex-row justify-end items-center gap-4">
-                                                            <span className="text-right flex flex-col justify-start items-end">
-                                                                {
-                                                                    time.name.map((dj, index) => (
-                                                                        <Fragment key={index}>
-                                                                            <span className="">{dj}</span>
-                                                                            {
-                                                                                (index < time.name.length - 1) ? (
-                                                                                    <Fragment>
-                                                                                        <span className="text-thin text-sm opacity-50 leading-none"> b2b </span>
-                                                                                    </Fragment>
-                                                                                ) : null
-                                                                            }
-                                                                        </Fragment>
-                                                                    ))
-                                                                }
-                                                            </span>
-                                                            <span>
-                                                                <span className="font-extralight whitespace-nowrap">{time.timeStartHour}</span>
-                                                                <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeStartMin} - </span>
-                                                                <span className="font-extralight whitespace-nowrap">{time.timeEndHour}</span>
-                                                                <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeEndMin}</span>
-                                                            </span>
-                                                        </li>
-                                                    ))
+                                                    nextEvent.lineUp.length === 0 ? (
+                                                        <span>
+                                                            Lineup à venir
+                                                        </span>
+                                                    )
+                                                        :
+                                                        nextEvent.lineUp.map(time => (
+                                                            <li key={time.timeStartHour} className="flex flex-row justify-end items-center gap-4">
+                                                                <span className="text-right flex flex-col justify-start items-end">
+                                                                    {
+                                                                        time.name.map((dj, index) => (
+                                                                            <Fragment key={index}>
+                                                                                <span className="">{dj}</span>
+                                                                                {
+                                                                                    (index < time.name.length - 1) ? (
+                                                                                        <Fragment>
+                                                                                            <span className="text-thin text-sm opacity-50 leading-none"> b2b </span>
+                                                                                        </Fragment>
+                                                                                    ) : null
+                                                                                }
+                                                                            </Fragment>
+                                                                        ))
+                                                                    }
+                                                                </span>
+                                                                <span>
+                                                                    <span className="font-extralight whitespace-nowrap">{time.timeStartHour}</span>
+                                                                    <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeStartMin} - </span>
+                                                                    <span className="font-extralight whitespace-nowrap">{time.timeEndHour}</span>
+                                                                    <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeEndMin}</span>
+                                                                </span>
+                                                            </li>
+                                                        ))
                                                 }
                                             </ol>
-                                            <Link href="./dons" target="_blank" rel="noopener noreferrer" className="p-2 border border-solid border-neutral-50 hover:border-neon hover:text-neon">Participer aux frais</Link>
+                                            <div className="flex flex-col justify-start items-end gap-2">
+                                                <Link to="/inscription" className="p-2 text-white border border-solid border-neutral-50 hover:underline">Inscription</Link>
+                                                <Link to="/dons" className="p-2 text-white border border-solid border-neutral-50 hover:underline">Participer aux frais</Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

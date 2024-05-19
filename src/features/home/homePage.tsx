@@ -16,10 +16,10 @@ export default function HomePage() {
                     }}
                 >
                     <div className="absolute top-0 right-0 animate-blink">
-                        <span className="text-md text-white/50 text-right">bientôt de retour</span>
+                        <span className="text-md text-[#FF0000]/50 text-right">08 06 2024</span>
                     </div>
                     <div className="h-fit absolute inset-0">
-                        <SpectreLong className="absolute fill-white stroke-white" />
+                        <SpectreLong className="absolute fill-none stroke-[#FF0000] drop-shadow-neon" />
                     </div>
                 </div>
                 <Glitch />
