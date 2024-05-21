@@ -1,15 +1,16 @@
 import { Link } from "@tanstack/react-router"
 import { Fragment } from "react"
-import banner_01072023 from "../../assets/banners/01072023.png"
-import banner_01092021 from "../../assets/banners/01092021.png"
-import banner_04112021 from "../../assets/banners/04112021.png"
-import banner_09092023 from "../../assets/banners/09092023.png"
-import banner_10062022 from "../../assets/banners/10062022.png"
-import banner_18032022 from "../../assets/banners/18032022.png"
-import banner_22042022 from "../../assets/banners/22042022.png"
-import banner_22072021 from "../../assets/banners/22072021.png"
-import banner_26112021 from "../../assets/banners/26112021.png"
-import banner_28072021 from "../../assets/banners/28072021.png"
+import banner_20210722 from "../../assets/banners/20210722.png"
+import banner_20210728 from "../../assets/banners/20210728.png"
+import banner_20210901 from "../../assets/banners/20210901.png"
+import banner_20211104 from "../../assets/banners/20211104.png"
+import banner_20211126 from "../../assets/banners/20211126.png"
+import banner_20220318 from "../../assets/banners/20220318.png"
+import banner_20220422 from "../../assets/banners/20220422.png"
+import banner_20220610 from "../../assets/banners/20220610.png"
+import banner_20230701 from "../../assets/banners/20230701.png"
+import banner_20230909 from "../../assets/banners/20230909.png"
+import banner_20240608 from "../../assets/banners/20240608.jpg"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/accordion"
 import Page from "../../components/page"
 
@@ -33,7 +34,7 @@ const pastEvents: Event[] = [
         id: "boom-boom-boom-i-want-you-in-the-woods_09092023",
         date: "09 09 2023",
         name: "Boom Boom Boom Boom I Want You In The Woods",
-        banner: banner_09092023,
+        banner: banner_20230909,
         lineUp: [
             {
                 timeStartHour: "22",
@@ -97,7 +98,7 @@ const pastEvents: Event[] = [
         id: "vincennes-1_01072023",
         date: "01 07 2023",
         name: "Objectif Lune",
-        banner: banner_01072023,
+        banner: banner_20230701,
         lineUp: [
             {
                 timeStartHour: "22",
@@ -161,7 +162,7 @@ const pastEvents: Event[] = [
         id: "liebe-4_10062022",
         date: "10 06 2022",
         name: "Liebe x Spectre - Once again",
-        banner: banner_10062022,
+        banner: banner_20220610,
         lineUp: [
             {
                 timeStartHour: "20",
@@ -218,7 +219,7 @@ const pastEvents: Event[] = [
         id: "liebe-3_22042022",
         date: "22 04 2022",
         name: "Liebe x Spectre invite Uktracks Records",
-        banner: banner_22042022,
+        banner: banner_20220422,
         lineUp: [
             {
                 timeStartHour: "20",
@@ -268,7 +269,7 @@ const pastEvents: Event[] = [
         id: "liebe-2_18032022",
         date: "18 03 2022",
         name: "Liebe x Spectre II",
-        banner: banner_18032022,
+        banner: banner_20220318,
         lineUp: [
             {
                 timeStartHour: "19",
@@ -318,7 +319,7 @@ const pastEvents: Event[] = [
         id: "liebe-1_26112021",
         date: "26 11 2021",
         name: "Liebe x Spectre",
-        banner: banner_26112021,
+        banner: banner_20211126,
         lineUp: [
             {
                 timeStartHour: "18",
@@ -361,7 +362,7 @@ const pastEvents: Event[] = [
         id: "45-tours-2_04112021",
         date: "04 11 2021",
         name: "Le 45 Tours x Spectre II",
-        banner: banner_04112021,
+        banner: banner_20211104,
         lineUp: [
             {
                 timeStartHour: "19",
@@ -397,7 +398,7 @@ const pastEvents: Event[] = [
         id: "45-tours-1_01092021",
         date: "01 09 2021",
         name: "Le 45 Tours x Spectre",
-        banner: banner_01092021,
+        banner: banner_20210901,
         lineUp: [
             {
                 timeStartHour: "18",
@@ -440,7 +441,7 @@ const pastEvents: Event[] = [
         id: "cavern-2_28072021",
         date: "28 07 2021",
         name: "Cavern x Spectre II",
-        banner: banner_28072021,
+        banner: banner_20210728,
         lineUp: [
             {
                 timeStartHour: "18",
@@ -483,7 +484,7 @@ const pastEvents: Event[] = [
         id: "cavern-1_22072021",
         date: "22 07 2021",
         name: "Cavern x Spectre",
-        banner: banner_22072021,
+        banner: banner_20210722,
         lineUp: [
             {
                 timeStartHour: "19",
@@ -517,7 +518,13 @@ const pastEvents: Event[] = [
     }
 ]
 
-const nextEvent: Event | undefined = undefined
+const nextEvent: Event | undefined = {
+    id: "back_to_betise_08062024",
+    date: "08 06 2024",
+    name: "Back to bêtises",
+    banner: banner_20240608,
+    lineUp: []
+}
 
 export default function EventsPage() {
     return (
@@ -545,35 +552,44 @@ export default function EventsPage() {
                                         <div className="flex flex-col justify-between items-end gap-8">
                                             <ol className="flex flex-col justify-start items-stretch gap-2">
                                                 {
-                                                    nextEvent.lineUp.map(time => (
-                                                        <li key={time.timeStartHour} className="flex flex-row justify-end items-center gap-4">
-                                                            <span className="text-right flex flex-col justify-start items-end">
-                                                                {
-                                                                    time.name.map((dj, index) => (
-                                                                        <Fragment key={index}>
-                                                                            <span className="">{dj}</span>
-                                                                            {
-                                                                                (index < time.name.length - 1) ? (
-                                                                                    <Fragment>
-                                                                                        <span className="text-thin text-sm opacity-50 leading-none"> b2b </span>
-                                                                                    </Fragment>
-                                                                                ) : null
-                                                                            }
-                                                                        </Fragment>
-                                                                    ))
-                                                                }
-                                                            </span>
-                                                            <span>
-                                                                <span className="font-extralight whitespace-nowrap">{time.timeStartHour}</span>
-                                                                <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeStartMin} - </span>
-                                                                <span className="font-extralight whitespace-nowrap">{time.timeEndHour}</span>
-                                                                <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeEndMin}</span>
-                                                            </span>
-                                                        </li>
-                                                    ))
+                                                    nextEvent.lineUp.length === 0 ? (
+                                                        <span>
+                                                            Lineup à venir
+                                                        </span>
+                                                    )
+                                                        :
+                                                        nextEvent.lineUp.map(time => (
+                                                            <li key={time.timeStartHour} className="flex flex-row justify-end items-center gap-4">
+                                                                <span className="text-right flex flex-col justify-start items-end">
+                                                                    {
+                                                                        time.name.map((dj, index) => (
+                                                                            <Fragment key={index}>
+                                                                                <span className="">{dj}</span>
+                                                                                {
+                                                                                    (index < time.name.length - 1) ? (
+                                                                                        <Fragment>
+                                                                                            <span className="text-thin text-sm opacity-50 leading-none"> b2b </span>
+                                                                                        </Fragment>
+                                                                                    ) : null
+                                                                                }
+                                                                            </Fragment>
+                                                                        ))
+                                                                    }
+                                                                </span>
+                                                                <span>
+                                                                    <span className="font-extralight whitespace-nowrap">{time.timeStartHour}</span>
+                                                                    <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeStartMin} - </span>
+                                                                    <span className="font-extralight whitespace-nowrap">{time.timeEndHour}</span>
+                                                                    <span className="font-extralight whitespace-nowrap text-xs opacity-75">:{time.timeEndMin}</span>
+                                                                </span>
+                                                            </li>
+                                                        ))
                                                 }
                                             </ol>
-                                            <Link href="./dons" target="_blank" rel="noopener noreferrer" className="p-2 border border-solid border-neutral-50 hover:border-neon hover:text-neon">Participer aux frais</Link>
+                                            <div className="flex flex-col justify-start items-end gap-2">
+                                                <Link to="/inscription" className="p-2 text-white border border-solid border-neutral-50 hover:underline">Inscription</Link>
+                                                <Link to="/dons" className="p-2 text-white border border-solid border-neutral-50 hover:underline">Participer aux frais</Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

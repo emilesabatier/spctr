@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import * as tailwindcssAnimate from "tailwindcss-animate"
 
+
 export default {
     darkMode: ["class"],
     content: [
@@ -20,7 +21,9 @@ export default {
                 neutral: "#1F292E",
                 neon: "#f7e13b",
                 background: "#030711",
-                foreground: "#EEEEEE"
+                foreground: "#EEEEEE",
+                red: "#FF0000",
+                green: "#00FF00"
             },
             keyframes: {
                 "accordion-down": {
@@ -163,9 +166,9 @@ export default {
             dropShadow: {
                 "neon": [
                     "0 0 2px",
-                    "0 0 1em #EBD31455",
-                    "0 0 0.5em #EBD31455",
-                    "0 0 0.1em #EBD31455",
+                    "0 0 1em #FF000055",
+                    "0 0 0.5em #FF000055",
+                    "0 0 0.1em #FF000055",
                     "0 10px 3px #000"
                 ]
             },
@@ -174,5 +177,7 @@ export default {
             },
         }
     },
-    plugins: [tailwindcssAnimate],
+    plugins: [
+        tailwindcssAnimate
+    ],
 }

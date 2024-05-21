@@ -4,7 +4,7 @@ import Page from "../../components/page";
 export default function ManifestPage() {
     return (
         <Page title="Manifeste">
-            <p>
+            <div>
                 Hello !
                 <br />
                 Nous c'est Spectre, on est un collectif techno (et un groupe de potes surtout) né en 2021 à Paris. On a déjà une dizaine de soirées à notre actif, dans toutes sortes de lieu !
@@ -68,7 +68,7 @@ export default function ManifestPage() {
                 <br />
                 <br />
                 <b>Rendons la nuit plus safe pour tous.tes !</b>
-            </p>
+            </div>
         </Page>
     )
 }
