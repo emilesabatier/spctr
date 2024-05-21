@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import * as tailwindcssAnimate from "tailwindcss-animate"
 
+
 export default {
     darkMode: ["class"],
     content: [
@@ -21,7 +22,8 @@ export default {
                 neon: "#f7e13b",
                 background: "#030711",
                 foreground: "#EEEEEE",
-                red: "#FF0000"
+                red: "#FF0000",
+                green: "#00FF00"
             },
             keyframes: {
                 "accordion-down": {
@@ -175,5 +177,7 @@ export default {
             },
         }
     },
-    plugins: [tailwindcssAnimate],
+    plugins: [
+        tailwindcssAnimate
+    ],
 }

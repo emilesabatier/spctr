@@ -1,1 +1,1 @@
-# Collectif spectre
+# Collectif Spectre
