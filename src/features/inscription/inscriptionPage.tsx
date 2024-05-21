@@ -59,7 +59,7 @@ export function InscriptionPage() {
 
         setIsLoading(false)
         setIsSubmitted(true)
-        // form.reset()
+        form.reset()
     }
 
     return (
