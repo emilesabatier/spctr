@@ -6,11 +6,12 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, process.cwd())
 
     return {
+        base: "/",
         plugins: [
             react()
         ],
         server: {
-            port: Number(env.VITE_PORT)
+            port: 3000
         },
         build: {
             outDir: "build"
