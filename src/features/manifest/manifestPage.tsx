@@ -7,7 +7,7 @@ export default function ManifestPage() {
             <div>
                 Hello !
                 <br />
-                Nous c'est Spectre, on est un collectif techno (et un groupe de potes surtout) né en 2021 à Paris. On a déjà une dizaine de soirées à notre actif, dans toutes sortes de lieu !
+                Nous c'est Spectre, on est un collectif techno (et un groupe de potes surtout) né en 2021 à Paris. On a déjà une dizaine de soirées à notre actif, dans toutes sortes de lieux !
                 <br />
                 <br />
                 Pour commencer, on voudrait vous présenter nos valeurs. On a à cœur d'organiser des soirées conviviales, basées sur la bienveillance et l'inclusivité : évènements de petite taille, entrées à petit prix ou PAF à prix libre qui nous sert uniquement à louer la sono, transparence sur la moula, engagement à laisser un lieu aussi propre qu'à notre arrivée, tolérance zéro envers les comportements problématiques, présence d'un stand RDR, bref on fait au max pour un moment 100% plaisir!
@@ -46,7 +46,7 @@ export default function ManifestPage() {
                         <span>
                             <b>À chacun.e sa conso, mais à tou.te.s la RDR.</b> Personne n'est là pour te juger.
                             <br />
-                            Tu as la conso que tu as, et tu gères comme tu te sens de gérer. Mais n'oublie pas que le mieux, pour kiffer ça soirée, c'est de s'assurer de pouvoir la finir.
+                            Tu as la conso que tu as, et tu gères comme tu te sens de gérer. Mais n'oublie pas que le mieux, pour kiffer sa soirée, c'est de s'assurer de pouvoir la finir.
                         </span>
                     </li>
                     <li className="inline-flex justify-start items-start gap-2">
