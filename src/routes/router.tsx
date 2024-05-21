@@ -26,7 +26,8 @@ const routeTree = rootLayoutRoute.addChildren([
 
 
 export const router = createRouter({
-    routeTree
+    routeTree,
+    basepath: "/"
 })
 
 
