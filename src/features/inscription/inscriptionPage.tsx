@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form"
 import * as v from "valibot"
 import { CircularLoader } from "../../components/circularLoader"
 import Page from "../../components/page"
+import { router } from "../../routes/router"
 import { cn } from "../../services/cn.service"
 
 
@@ -24,7 +25,6 @@ export function InscriptionPage() {
 
     useEffect(() => { document.title = "Inscription | Spectre" }, [])
 
-    const [isSubmitted, setIsSubmitted] = useState<null | boolean>(null)
     const [isLoading, setIsLoading] = useState(false)
 
     const form = useForm<v.Output<typeof inscriptionSchema>>({
@@ -40,7 +40,6 @@ export function InscriptionPage() {
         const triggerResponse = await form.trigger()
         if (!triggerResponse) return
 
-        setIsSubmitted(null)
         setIsLoading(true)
 
         const submitResponse = await fetch(
@@ -53,13 +52,17 @@ export function InscriptionPage() {
         )
         if (!submitResponse) {
             setIsLoading(false)
-            setIsSubmitted(false)
             return
         }
 
         setIsLoading(false)
-        setIsSubmitted(true)
         form.reset()
+        router.navigate({
+            to: "/inscription/dons",
+            search: {
+                fromForm: true
+            }
+        })
     }
 
     return (
@@ -79,17 +82,6 @@ export function InscriptionPage() {
                             <span className="text-white/50 underline hover:no-underline">spectre.tchno@gmail.com</span>
                         </a>
                     </span>
-                    {(isSubmitted === true) ? (
-                        <span className="text-green">
-                            Formulaire soumis, on vous remercie.
-                        </span>
-                    ) : (
-                        (isSubmitted === false) ? (
-                            <span className="text-red">
-                                Le formulaire ne peut être envoyé, veuillez réessayer plus tard.
-                            </span>
-                        ) : null
-                    )}
                 </div>
                 <form className="flex flex-col justify-start items-start gap-4">
                     <div className="w-full flex flex-col justify-start items-start gap-2">
@@ -124,7 +116,7 @@ export function InscriptionPage() {
                                 "w-full p-2 border bg-transparent",
                                 !form.formState.errors.referrer ? "text-white border-white" : "text-red border-red placeholder:text-red/50"
                             )}
-                            placeholder="Personne référente"
+                            placeholder="Membre du collectif référent"
                         />
                     </div>
 

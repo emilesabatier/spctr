@@ -218,7 +218,7 @@ const pastEvents: Event[] = [
     {
         id: "liebe-3_22042022",
         date: "22 04 2022",
-        name: "Liebe x Spectre invite Uktracks Records",
+        name: "Liebe x Spectre invite Ultracks Records",
         banner: banner_20220422,
         lineUp: [
             {
@@ -542,11 +542,11 @@ export default function EventsPage() {
                                         <span className="font-bold text-4xl leading-none">{nextEvent.date}</span>
                                         <span className="font-extralight text-2xl text-right leading-none">{nextEvent.name}</span>
                                     </div>
-                                    <div className="w-full flex flex-col md:flex-row justify-between items-stretch gap-4">
+                                    <div className="w-full flex flex-col md:flex-row justify-between items-start gap-4">
                                         <img
                                             src={nextEvent.banner}
                                             alt="09092023"
-                                            className="h-auto w-full md:w-3/5"
+                                            className="w-full md:w-3/5 aspect-video"
                                             loading="lazy"
                                         />
                                         <div className="flex flex-col justify-between items-end gap-8">
@@ -587,8 +587,8 @@ export default function EventsPage() {
                                                 }
                                             </ol>
                                             <div className="flex flex-col justify-start items-end gap-2">
-                                                <Link to="/inscription" className="p-2 text-white border border-solid border-neutral-50 hover:underline">Inscription</Link>
-                                                <Link to="/dons" className="p-2 text-white border border-solid border-neutral-50 hover:underline">Participer aux frais</Link>
+                                                <Link to="/inscription" className="p-2 text-white border border-solid border-neutral-50 hover:underline whitespace-nowrap">Inscription</Link>
+                                                <Link to="/inscription/dons" className="p-2 text-white border border-solid border-neutral-50 hover:underline whitespace-nowrap">Participer aux frais</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -611,11 +611,11 @@ export default function EventsPage() {
                                             </div>
                                         </AccordionTrigger>
                                         <AccordionContent>
-                                            <div className="flex flex-col md:flex-row justify-between items-end md:items-stretch gap-2">
+                                            <div className="flex flex-col md:flex-row justify-between items-end md:items-start gap-2">
                                                 <img
                                                     src={event.banner}
                                                     alt={event.id}
-                                                    className="h-auto w-full md:w-3/5"
+                                                    className="w-full md:w-3/5 aspect-video"
                                                     loading="lazy"
                                                 />
                                                 <div className="min-w-min flex flex-row justify-start items-start md:items-center">

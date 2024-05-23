@@ -6,5 +6,10 @@ import { navigationLayoutRoute } from "../navigation.layout"
 export const eventsRoute = createRoute({
     getParentRoute: () => navigationLayoutRoute,
     path: '/evenements',
+    beforeLoad: () => {
+        return {
+            isFromForm: false
+        }
+    },
     component: () => <EventsPage />
 })

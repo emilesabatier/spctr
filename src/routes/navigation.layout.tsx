@@ -8,5 +8,10 @@ export const navigationLayoutRoute = createRoute({
     getParentRoute: () => rootLayoutRoute,
     id: 'navigationLayout',
     pendingComponent: () => <LoadingLayout />,
+    beforeLoad: () => {
+        return {
+            isFromForm: undefined
+        }
+    },
     component: () => <NavigationLayout />
 })
