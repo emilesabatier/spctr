@@ -4,6 +4,8 @@ import { donationsRoute } from "./donations/donations.route"
 import { eventsRoute } from "./events/events.route"
 import { galleryRoute } from "./gallery/gallery.route"
 import { homeRoute } from "./home/home.route"
+import { donationRoute } from "./inscription/donation.route"
+import { inscriptionLayoutRoute } from "./inscription/inscription.layout"
 import { inscriptionRoute } from "./inscription/inscription.route"
 import { manifestRoute } from "./manifest/manifest.route"
 import { navigationLayoutRoute } from "./navigation.layout"
@@ -20,14 +22,20 @@ const routeTree = rootLayoutRoute.addChildren([
         manifestRoute,
         contactRoute,
         donationsRoute,
-        inscriptionRoute
+        inscriptionLayoutRoute.addChildren([
+            inscriptionRoute,
+            donationRoute
+        ])
     ])
 ])
 
 
 export const router = createRouter({
     routeTree,
-    basepath: "/"
+    basepath: "/",
+    context: {
+        isFromForm: undefined
+    }
 })
 
 

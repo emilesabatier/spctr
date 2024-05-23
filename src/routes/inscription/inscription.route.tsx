@@ -1,10 +1,10 @@
 import { createRoute } from "@tanstack/react-router"
 import { InscriptionPage } from "../../features/inscription/inscriptionPage"
-import { navigationLayoutRoute } from "../navigation.layout"
+import { inscriptionLayoutRoute } from "./inscription.layout"
 
 
 export const inscriptionRoute = createRoute({
-    getParentRoute: () => navigationLayoutRoute,
-    path: '/inscription',
+    getParentRoute: () => inscriptionLayoutRoute,
+    path: '/',
     component: () => <InscriptionPage />
 })
