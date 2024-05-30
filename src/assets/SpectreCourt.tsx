@@ -11,8 +11,10 @@ export function SpectreCourt(props: SpectreCourt) {
     return (
         <svg
             viewBox="0 0 537.81 514.17"
+            width={514.17}
+            height={537.81}
             className={cn(
-                "overflow-visible",
+                "overflow-visible w-fit h-fit",
                 props.className
             )}
             style={props.style}
