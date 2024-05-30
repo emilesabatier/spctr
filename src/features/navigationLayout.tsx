@@ -24,7 +24,7 @@ export function NavigationLayout() {
                 {
                     (isMobile && location.href !== "/") ?
                         <div className='w-full border-t border-t-white/10 p-4 flex justify-between items-center overflow-hidden'>
-                            <Link to="/" className="h-full flex justify-start items-center">
+                            <Link to="/" className="h-[32px] flex justify-start items-center">
                                 <SpectreCourt
                                     className="h-full fill-white stroke-none"
                                 />
@@ -32,7 +32,7 @@ export function NavigationLayout() {
                             <Popover>
                                 <PopoverTrigger asChild>
                                     <Button>
-                                        <IconMenu className="stroke-white" />
+                                        <IconMenu className="text-white" />
                                     </Button>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-fit bg-background mb-0 mr-4 p-4 rounded-none border-white flex justify-end items-center">
@@ -48,18 +48,18 @@ export function NavigationLayout() {
                             <Navigation />
                             {
                                 location.href === "/" ? null : (
-                                    <Link to="/" className="w-2/3 flex justify-end items-center">
+                                    <Link to="/" className="w-fit flex justify-end items-center">
                                         <div className="relative w-full" >
-                                            <div className="relative inset-0 w-full"                >
-                                                <SpectreCourt className="fill-none stroke-white" />
+                                            <div className="w-[128px] relative inset-0 w-full"                >
+                                                <SpectreCourt className="w-full fill-none stroke-white" />
                                             </div>
                                             <div
-                                                className="h-fit absolute inset-0 z-[10] transition-opacity duration-700 ease-in opacity-0 hover:opacity-100"
+                                                className="w-[128px] absolute inset-0 z-[10] transition-opacity duration-700 ease-in opacity-0 hover:opacity-100"
                                                 style={{
                                                     filter: "url(#glitch)"
                                                 }}
                                             >
-                                                <SpectreCourt className="absolute fill-white stroke-white" />
+                                                <SpectreCourt className="w-full absolute fill-white stroke-white" />
                                             </div>
                                             <Glitch />
                                         </div>
