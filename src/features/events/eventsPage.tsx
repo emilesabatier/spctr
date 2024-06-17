@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router"
 import { Fragment } from "react"
 import banner_20210722 from "../../assets/banners/20210722.png"
 import banner_20210728 from "../../assets/banners/20210728.png"
@@ -11,6 +10,7 @@ import banner_20220610 from "../../assets/banners/20220610.png"
 import banner_20230701 from "../../assets/banners/20230701.png"
 import banner_20230909 from "../../assets/banners/20230909.png"
 import banner_20240608 from "../../assets/banners/20240608.jpg"
+import banner_20240621 from "../../assets/banners/20240621.jpg"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../../components/accordion"
 import Page from "../../components/page"
 
@@ -30,6 +30,56 @@ type Event = {
 }
 
 const pastEvents: Event[] = [
+    {
+        id: "back_to_betise_08062024",
+        date: "08 06 2024",
+        name: "Back to bêtises",
+        banner: banner_20240608,
+        lineUp: [
+            {
+                timeStartHour: "22",
+                timeStartMin: "30",
+                timeEndHour: "23",
+                timeEndMin: "30",
+                name: ["FMR"]
+            },
+            {
+                timeStartHour: "23",
+                timeStartMin: "30",
+                timeEndHour: "01",
+                timeEndMin: "00",
+                name: ["Hepeme"]
+            },
+            {
+                timeStartHour: "01",
+                timeStartMin: "00",
+                timeEndHour: "02",
+                timeEndMin: "00",
+                name: ["AXLR"]
+            },
+            {
+                timeStartHour: "02",
+                timeStartMin: "00",
+                timeEndHour: "03",
+                timeEndMin: "30",
+                name: ["DSL"]
+            },
+            {
+                timeStartHour: "03",
+                timeStartMin: "30",
+                timeEndHour: "05",
+                timeEndMin: "00",
+                name: ["One Step Further"]
+            },
+            {
+                timeStartHour: "05",
+                timeStartMin: "00",
+                timeEndHour: "06",
+                timeEndMin: "00",
+                name: ["Destination Plaisir"]
+            }
+        ]
+    },
     {
         id: "boom-boom-boom-i-want-you-in-the-woods_09092023",
         date: "09 09 2023",
@@ -519,10 +569,10 @@ const pastEvents: Event[] = [
 ]
 
 const nextEvent: Event | undefined = {
-    id: "back_to_betise_08062024",
-    date: "08 06 2024",
-    name: "Back to bêtises",
-    banner: banner_20240608,
+    id: "fete_de_la_musique_20240621",
+    date: "21 06 2024",
+    name: "Fête de la musique",
+    banner: banner_20240621,
     lineUp: []
 }
 
@@ -546,7 +596,7 @@ export default function EventsPage() {
                                         <img
                                             src={nextEvent.banner}
                                             alt="09092023"
-                                            className="w-full md:w-3/5 aspect-video"
+                                            className="w-full max-w-[256px]"
                                             loading="lazy"
                                         />
                                         <div className="flex flex-col justify-between items-end gap-8">
@@ -587,8 +637,15 @@ export default function EventsPage() {
                                                 }
                                             </ol>
                                             <div className="flex flex-col justify-start items-end gap-2">
-                                                <Link to="/inscription" className="p-2 text-white border border-solid border-neutral-50 hover:underline whitespace-nowrap">Inscription</Link>
-                                                <Link to="/inscription/dons" className="p-2 text-white border border-solid border-neutral-50 hover:underline whitespace-nowrap">Participer aux frais</Link>
+                                                {/* <Link to="/inscription" className="p-2 text-white border border-solid border-neutral-50 hover:underline whitespace-nowrap">Inscription</Link> */}
+                                                <a
+                                                    href="https://donate.stripe.com/eVa01y5j90nz0nK9AE"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="p-2 text-white border border-solid border-neutral-50 hover:underline whitespace-nowrap"
+                                                >
+                                                    Participer aux frais
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

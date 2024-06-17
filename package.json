@@ -4,7 +4,7 @@
         "name": "Emile Sabatier"
     },
     "private": true,
-    "version": "0.2.5",
+    "version": "0.2.6",
     "type": "module",
     "scripts": {
         "dev": "vite",
