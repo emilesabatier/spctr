@@ -50,16 +50,16 @@ export function NavigationLayout() {
                                 location.href === "/" ? null : (
                                     <Link to="/" className="w-fit flex justify-end items-center">
                                         <div className="relative w-full" >
-                                            <div className="w-[128px] relative inset-0 w-full"                >
-                                                <SpectreCourt className="w-full fill-none stroke-white" />
+                                            <div className="w-full max-w-[128px] relative inset-0 w-full"                >
+                                                <SpectreCourt className="w-full h-full fill-none stroke-white" />
                                             </div>
                                             <div
-                                                className="w-[128px] absolute inset-0 z-[10] transition-opacity duration-700 ease-in opacity-0 hover:opacity-100"
+                                                className="w-full max-w-[128px] absolute inset-0 z-[10] transition-opacity duration-700 ease-in opacity-0 hover:opacity-100"
                                                 style={{
                                                     filter: "url(#glitch)"
                                                 }}
                                             >
-                                                <SpectreCourt className="w-full absolute fill-white stroke-white" />
+                                                <SpectreCourt className="w-full h-full absolute fill-white stroke-white" />
                                             </div>
                                             <Glitch />
                                         </div>
